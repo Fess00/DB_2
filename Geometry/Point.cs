@@ -1,6 +1,6 @@
 public class Point : IPoint
 {
-    private double x, y;
+    private float x, y;
 
     public Point()
     {
@@ -8,21 +8,21 @@ public class Point : IPoint
         this.y = 0;
     }
 
-    public double GetX()
+    public float GetX()
     {
         return this.x;
     }
 
-    public double GetY()
+    public float GetY()
     {
         return this.y;
     }
 
-    public void SetX(double x)
+    public void SetX(float x)
     {
         this.x = x;
     }
-    public void SetY(double y)
+    public void SetY(float y)
     {
         this.y = y;
     }

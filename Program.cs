@@ -1,7 +1,9 @@
-﻿IPoint a = new Point();
+﻿
+IPoint a = new Point();
 IPoint b = new Point();
 IPoint c = new Point();
 IPoint d = new Point();
+IPoint z = new Point();
 
 a.SetX(3);
 a.SetY(50);
@@ -12,11 +14,13 @@ c.SetY(70);
 d.SetX(120);
 d.SetY(180);
 
-ACurve line = new Line(a, b);
-ACurve bezier = new Bezier(a, b, c, d);
+Line line = new Line(a, d);
+Bezier bezier = new Bezier(a, b, c, d);
 
-VisualCurve vc = new VisualLine(line);
-VisualCurve vb = new VisualBezier(bezier);
+IPoint n = new Point();
 
-vc.Draw();
-vb.Draw();
+line.SetDrawer(new CGDrawer());
+bezier.SetDrawer(new CBDrawer());
+
+line.Draw();
+bezier.Draw();
